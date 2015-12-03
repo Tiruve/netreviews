@@ -313,7 +313,7 @@ class NetReviews extends Module
 			Tools::addCSS(($this->_path).'views/css/avisverifies-style-front.css', 'all');
 			// If there is a specific css file for the client then load
 			// (to avoid the specific problems of loss contained to update the module)
-			if (file_exists('./'.($this->_path).'views/css/avisverifies-style-front-specifique.css'))
+			if (file_exists(dirname($this->_path).'/'.$this->name.'/views/css/avisverifies-style-front-specifique.css'))
 				Tools::addCSS(($this->_path).'views/css/avisverifies-style-front-specifique.css', 'all');
 			Tools::addJS(($this->_path).'views/js/avisverifies.js', 'all');
 			if (Configuration::get('AV_SCRIPTFLOAT_ALLOWED'.$this->group_name) != 'yes')
@@ -326,7 +326,7 @@ class NetReviews extends Module
 			$this->context->controller->addCSS(($this->_path).'views/css/avisverifies-style-front.css', 'all');
 			// If there is a specific css file for the client then load
 			// (to avoid the specific problems of loss contained to update the module)
-			if (file_exists('./'.($this->_path).'views/css/avisverifies-style-front-specifique.css'))
+			if (file_exists($this->local_path.'views/css/avisverifies-style-front-specifique.css'))
 				$this->context->controller->addCSS(($this->_path).'views/css/avisverifies-style-front-specifique.css', 'all');
 
 			$this->context->controller->addJS(($this->_path).'views/js/avisverifies.js', 'all');
