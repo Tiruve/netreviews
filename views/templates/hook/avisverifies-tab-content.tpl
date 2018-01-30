@@ -25,7 +25,7 @@
 	<div id="under-headerAV"  style="background: url({$modules_dir|escape:'htmlall'}netreviews/views/img/{l s='Sceau_100_en.png' mod='netreviews'}) no-repeat #f1f1f1;background-size:45px 45px;background-repeat:no-repeat;">
 		<ul id="aggregateRatingAV">
 			<li><b>
-				{l s='Number of Reviews' mod='netreviews'}
+				{l s='Number of Reviews' mod='netreviews'} &nbsp;
 			</b> : {$count_reviews|intval}</li>
 			<li><b>{l s='Average Grade' mod='netreviews'}</b> : {$average_rate|floatval} /5 <div class="ratingWrapper" style="display:inline-block;">
     	<div class="ratingInner" style="width:{$average_rate_percent|intval}%"></div>
@@ -52,7 +52,7 @@
 			<div class="reviewAV">
 				<ul class="reviewInfosAV">
 					<li style="text-transform:capitalize">{$review['customer_name']|escape:'htmlall'}</li>
-					<li>&nbsp;{l s='the' mod='netreviews'} {$review['horodate']|escape:'htmlall'}</li>
+					<li>&nbsp;{l s='the' mod='netreviews'} {$review['horodate']|escape:'htmlall'}&nbsp;</li>
 					<li class="rateAV"><img src="{$modules_dir|escape:'htmlall'}netreviews/views/img/etoile{$review['rate']}.png" width="80" height="15" /> {$review['rate']|escape:'htmlall'}/5</li>
 				</ul>	
 
@@ -63,7 +63,7 @@
 
 				<div class="triangle-border top answer" {if $k_discussion > 0} review_number={$review['id_product_av']} style= "display: none" {/if}>
 
-					<span>&rsaquo; {l s='Comment from' mod='netreviews'}  <b style="text-transform:capitalize; font-weight:normal">{$discussion['origine']|escape:'htmlall'}</b> {l s='the' mod='netreviews'} {$discussion['horodate']|escape:'html'}</span>
+					<span>&rsaquo;&nbsp; {l s='Comment from' mod='netreviews'}  <b style="text-transform:capitalize; font-weight:normal">{$discussion['origine']|escape:'htmlall'}</b> {l s='the' mod='netreviews'} {$discussion['horodate']|escape:'html'}</span>
 					<p class="answer-bodyAV">{$discussion['commentaire']|escape:'htmlall'}</p>
 
 
